@@ -6,10 +6,14 @@ app.use(cors());
 
 const port = process.env.PORT || 8080;
 
-
 const about = require("./JSON/about.json");
-
 const portfolio = require("./JSON/portfolio.json");
+
+app.get('/',(req,res)=>{
+    res.send("Servidor funcionando");
+
+});
+
 
 app.get('/about',(req,res)=>{
     res.json(about);
